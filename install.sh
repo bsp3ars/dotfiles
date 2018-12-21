@@ -1,5 +1,6 @@
 case "$OSTYPE" in
-  darwin*)  echo "OSX" ;; 
+  darwin*)  
+    source macos.sh ;; 
   linux*)
     source linux.sh ;;
   msys*)    
