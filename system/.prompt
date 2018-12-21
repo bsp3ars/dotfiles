@@ -1,0 +1,6 @@
+#export PS1="\u > \w\$(git_branch) \\$ \[$(tput sgr0)\]"
+PS1="\[$COLOR_WHITE\][\w]"          # basename of pwd
+PS1+="\[\$(git_color)\]"        # colors git status
+PS1+="\$(git_branch)"           # prints current branch
+PS1+="\[$COLOR_MAGENTA\]\$\[$COLOR_RESET\] "   # '#' for root, else '$'
+export PS1
