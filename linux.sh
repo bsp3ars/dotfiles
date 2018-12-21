@@ -1,10 +1,7 @@
 #!/bin/bash
 
-# Request sudo
-if [ "$EUID" -ne 0 ]
-  then echo "Please run this script with sudo"
-  exit
-fi
+# Request sudo, necessary to run first as user to modify them rerun as root
+(( EUID != 0 )) && exec sudo -- "$0" "$@"
 
 # Add repositories
 
@@ -43,6 +40,7 @@ apt autoremove
 
 # Move all current dotfiles into new folder
 cd ~
+rm -rf tempDotFiles
 mkdir -m 777 tempDotFiles
 mv -t tempDotFiles .bash_profile .bashrc .gitconfig .gitignore .inputrc .profile 2>/dev/null
 
@@ -50,3 +48,7 @@ mv -t tempDotFiles .bash_profile .bashrc .gitconfig .gitignore .inputrc .profile
 ln -sv ~/dotfiles/bash/.bash_profile ~
 ln -sv ~/dotfiles/bash/.gitconfig ~
 ln -sv ~/dotfiles/bash/.inputrc ~
+
+# Close terminal and reopen
+hyper
+exit
