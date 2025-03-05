@@ -41,9 +41,13 @@ return {
             mods = "CTRL|SHIFT",
             action = act.Multiple {
                 act.ClearScrollback "ScrollbackAndViewport"
-                --   act.SendKey { key = 'L', mods = 'CTRL' },
+                --   act.SendKey { key = "L", mods = "CTRL" },
             }
-        }
+        },
+        {   key = "Backspace",
+            mods = "CTRL",
+            action = act.SendKey {key = "w", mods = "CTRL"}
+        },
     },
     
     -- Launch Menu
