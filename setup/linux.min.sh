@@ -1,6 +1,6 @@
 #!/bin/bash
 
-START_FOLDER="$(cd "$(dirname "${BASH_SOURCE}")" &>/dev/null && pwd)"
+START_FOLDER="$(cd "$(dirname "${BASH_SOURCE}")" &>/dev/null && cd .. && pwd)"
 CUSTOM_TIMESTAMP=$(date +%m-%d-%Y_%R)
 
 mkdir -p -m 777 $START_FOLDER/backups/$CUSTOM_TIMESTAMP
@@ -16,3 +16,5 @@ for FILE in ~/dotfiles/bash/.*; do
 done;
 
 unset START_FOLDER CUSTOM_TIMESTAMP FILE
+
+source ~/.bash_profile

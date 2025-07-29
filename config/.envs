@@ -1,3 +1,5 @@
+# Note: This file must be loaded before .functions and .prompts for appropriate behvior
+
 # Colors
 COLOR_RED="\033[0;31m"
 COLOR_YELLOW="\033[0;33m"

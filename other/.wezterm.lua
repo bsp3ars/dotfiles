@@ -53,8 +53,26 @@ return {
     -- Launch Menu
     launch_menu = {
         {
+            label = "Home (CMD)",
+            args = {"cmd.exe"},
+            cwd = "~",
+            domain = {DomainName = "local"},
+        },
+        {
+            label = "Home (WSL)",
+            args = {"bash"},
+            cwd = "~",
+            domain = {DomainName = "WSL:Ubuntu-24.04"},
+        },
+        {
             label = "laptop-4961 (local ssh)",
             args = {"ssh", "brandon@192.168.1.140"}
+        },
+        {
+            label = "Home (PowerShell)",
+            args = {"pwsh.exe"},
+            cwd = "~",
+            domain = {DomainName = "local"},
         }
     },
     

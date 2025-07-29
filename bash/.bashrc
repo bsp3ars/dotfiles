@@ -1,4 +1,4 @@
-# This file is used when Bash is invoked as a interactive login shell
+# This file is used for non-login shells
 
 for file in ~/dotfiles/config/.*; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
