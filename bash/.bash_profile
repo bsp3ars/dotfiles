@@ -1,4 +1,4 @@
-for file in ~/dotfiles/system/.{alias,env,functions,prompt}; do
+for file in ~/dotfiles/config/.*; do
 	[ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;

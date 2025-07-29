@@ -9,6 +9,5 @@ COLOR_RESET="\033[0m"
 COLOR_MAGENTA="\033[0;95m"
 
 # Tmuxinator
-export EDITOR="vim"
-export SHELL="bash"
-source ~/.bin/tmuxinator.bash
+EDITOR="nano"
+SHELL="bash"

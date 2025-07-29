@@ -26,11 +26,5 @@ function git_branch {
   fi
 }
 
-# Load RVM into a shell session *as a function*
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-
-# Add RVM to PATH for scripting
-export PATH=$PATH:$HOME/.rvm/bin
-
 # Load git-completion.bash
-source git-completion.bash
+source "$(cd "$(dirname "${BASH_SOURCE}")" &>/dev/null && cd .. && pwd)"/other/git-completion.bash
