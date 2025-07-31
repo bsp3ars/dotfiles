@@ -1,0 +1,7 @@
+[user]
+	name = Brandon Spears
+	email = bsp3ars@gmail.com
+[color]
+	ui = true
+[credential]
+	helper = store
