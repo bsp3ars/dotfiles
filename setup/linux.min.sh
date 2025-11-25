@@ -17,9 +17,9 @@ done;
 
 # Symlink .gitconfig based on argument
 if [ $# -eq 0 ]; then
-    ln -sv $START_FOLDER/config/base/.gitconfig ~
+    ln -sv $START_FOLDER/config/git/.base.gitconfig ~/.gitconfig
 elif [ "$1" == "wsl" ]; then
-    ln -sv $START_FOLDER/config/wsl/.gitconfig ~
+    ln -sv $START_FOLDER/config/wsl/.wsl.gitconfig ~/.gitconfig
 else
     echo "Invalid argument provided. Current accepted arguments are: (blank), wsl. Skipping .gitconfig symlink..."
 fi

@@ -1,0 +1,15 @@
+[user]
+	name = Brandon Spears
+	email = 117210078+bpspears@users.noreply.github.com
+[color]
+	ui = true
+[core]
+	editor = code --wait
+[diff]
+	tool = default-difftool
+[difftool "default-difftool"]
+	cmd = code --wait --diff $LOCAL $REMOTE
+[merge]
+	tool = code
+[mergetool "code"]
+	cmd = code --wait --merge $REMOTE $LOCAL $BASE $MERGED

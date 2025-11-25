@@ -1,0 +1,5 @@
+# Append to history file
+setopt append_history
+
+# Spelling correction for command names and directory names
+setopt correct
