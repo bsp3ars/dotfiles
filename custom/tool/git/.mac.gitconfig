@@ -1,12 +1,10 @@
 [user]
 	name = Brandon Spears
-	email = bsp3ars@gmail.com
+	email = 117210078+bpspears@users.noreply.github.com
 [color]
 	ui = true
 [core]
 	editor = code --wait
-[credential]
-	helper = /mnt/c/Program\\ Files/Git/mingw64/bin/git-credential-manager.exe
 [diff]
 	tool = default-difftool
 [difftool "default-difftool"]
@@ -15,3 +13,5 @@
 	tool = code
 [mergetool "code"]
 	cmd = code --wait --merge $REMOTE $LOCAL $BASE $MERGED
+[push]
+	autoSetupRemote = true

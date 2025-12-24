@@ -1,0 +1,15 @@
+parent_folder=$(cd -- "$(dirname -- "${BASH_SOURCE[0]:-${(%):-%x}}")" && pwd -P)
+
+source $parent_folder/.active_profiles
+
+# if active_profiles array is not empty
+if (( ${#active_profiles[@]} )); then
+    for profile in "${#active_profiles[@]}"; do
+        for file in $parent_folder/$profile/.*; do
+            [ -r "$file" ] && [ -f "$file" ] && source "$file";
+        done
+    done
+elif
+    echo "No profiles specified"
+fi
+unset file, parent_folder, profile
