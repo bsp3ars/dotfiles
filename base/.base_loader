@@ -1,0 +1,24 @@
+# profile is used for interactive login shells, rc is used for non-login shells
+
+source ~/.dotfiles_config
+
+# Profile
+source $DOTFILES_ROOT_FOLDER/custom/profile/.profile_loader
+
+# Shell config files
+if [ -n "$ZSH_VERSION" ]; then
+    for file in $DOTFILES_ROOT_FOLDER/custom/shell/zsh/.*; do
+        [ -r "$file" ] && [ -f "$file" ] && source "$file"
+    done
+elif [ -n "$BASH_VERSION" ]; then
+    for file in $DOTFILES_ROOT_FOLDER/custom/shell/bash/.*; do
+        [ -r "$file" ] && [ -f "$file" ] && source "$file"
+    done
+else
+    echo "Running in an unknown shell"
+fi
+
+unset file
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

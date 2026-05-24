@@ -1,14 +1,14 @@
 # Used this site for conversion of original colors: https://hexdocs.pm/color_palette/ansi_color_codes.html
 
-COLOR_CYAN='%F{14}'
-COLOR_MAGENTA='%F{13}'
-COLOR_RESET='%f'
-COLOR_WHITE='%F{15}'
+color_cyan='%F{14}'
+color_magenta='%F{13}'
+color_reset='%f'
+color_white='%F{15}'
 
 setopt prompt_subst
 
-PS1='(${COLOR_CYAN}%m${COLOR_RESET})' # hostname
+PS1='(${color_cyan}%m${color_reset})' # hostname
 PS1+='[%~]' # directory
 PS1+='$(git_branch)' # branch
-PS1+='${COLOR_MAGENTA}%#${COLOR_RESET} '
+PS1+='${color_magenta}%#${color_reset} '
 export PS1

@@ -1,22 +1,22 @@
 # Used this site for conversion of original colors: https://hexdocs.pm/color_palette/ansi_color_codes.html
 
-COLOR_GREEN="%F{10}"
-COLOR_PURPLE="%F{5}"
-COLOR_RED="%F{9}"
-COLOR_RESET="%f"
-COLOR_YELLOW="%F{11}"
+color_green="%F{10}"
+color_purple="%F{5}"
+color_red="%F{9}"
+color_reset="%f"
+color_yellow="%F{11}"
 
 git_color() {
   local git_status="$(git status 2> /dev/null)"
 
   if [[ $git_status =~ "Your branch is ahead of" || $git_status =~ "Your branch is behind" ]]; then
-    echo -e $COLOR_YELLOW
+    echo -e $color_yellow
   elif [[ ! $git_status =~ "working tree clean" ]]; then
-    echo -e $COLOR_RED
+    echo -e $color_red
   elif [[ $git_status =~ "nothing to commit" ]]; then
-    echo -e $COLOR_GREEN
+    echo -e $color_green
   else
-    echo -e $COLOR_OCHRE
+    echo -e $color_purple
   fi
 }
 
@@ -28,9 +28,9 @@ git_branch() {
       # Detached HEAD state, show commit hash
       branch=$(git rev-parse --short HEAD 2>/dev/null)
     fi
-    echo "($(git_color)${branch}${COLOR_RESET})"
+    echo "($(git_color)${branch}${color_reset})"
   fi
 }
 
 # Load wezterm.sh
-source "$0:a:h:h"/../other/wezterm.sh
+source $DOTFILES_ROOT_FOLDER/other/wezterm.sh

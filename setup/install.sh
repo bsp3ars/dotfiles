@@ -1,8 +1,8 @@
 case "$OSTYPE" in
   darwin*)  
-    source mac.min.zsh ;; 
+    source mac_setup.zsh ;; 
   linux*)
-    source linux.min.sh ;;
+    source linux_setup.sh ;;
   # msys*)    
   #   source windows.sh ;;
   *)
