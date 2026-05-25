@@ -3,7 +3,7 @@ Brandon's dotfiles
 
 ## Winsupply specific environment variables
 
-Place the following in a file in the config folder and ensure that the extension is .local (git won't track)
+Place the following in a file in the config folder and ensure that the extension is .local (so that git won't track the file)
 ```sh
 # AD Credentials
 export WIN_USERNAME=exampleUsername

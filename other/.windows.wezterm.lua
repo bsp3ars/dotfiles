@@ -65,8 +65,16 @@ return {
             domain = {DomainName = "WSL:Ubuntu-24.04"},
         },
         {
-            label = "laptop-4961 (local ssh)",
-            args = {"ssh", "brandon@192.168.1.140"}
+            label = "proxmox (local ssh)",
+            args = {"ssh", "root@192.168.1.150"}
+        },
+        {
+            label = "truenas (local ssh)",
+            args = {"ssh", "brandon@192.168.1.151"}
+        },
+        {
+            label = "server-u1 (local ssh)",
+            args = {"ssh", "brandon@192.168.1.152"}
         },
         {
             label = "Home (PowerShell)",
@@ -80,7 +88,7 @@ return {
     automatically_reload_config = true,
     audible_bell = "Disabled",
     enable_scroll_bar = true,
-    front_end = "WebGpu",
+    front_end = "OpenGL",
     max_fps = 120,
     scrollback_lines = 20000,
     webgpu_power_preference = "HighPerformance",
@@ -98,7 +106,7 @@ return {
     },
     color_scheme = "Dracula+ Modified",
     font = wezterm.font("JetBrains Mono", {weight = "Medium"}),
-    window_background_opacity = 0.98,
+    window_background_opacity = 0.95,
   
     -- Window
     adjust_window_size_when_changing_font_size = false,
@@ -121,3 +129,6 @@ return {
         bottom = 10
     },
 }
+
+-- A recent visual glitch has been occurring where a white box appears when using window_background_opacity
+-- Using the OpenGL front_end has resolved the issue, I did need to adjust the OpenGL GDI compatibility for Wezterm in NVIDIA Control Panel
