@@ -31,8 +31,5 @@ function git_branch {
   fi
 }
 
-# Load git-completion.bash
-source "$(cd "$(dirname "${BASH_SOURCE}")" &>/dev/null && cd .. && pwd)"/other/git-completion.bash
-
 # Load wezterm.sh
-source "$(cd "$(dirname "${BASH_SOURCE}")" &>/dev/null && cd .. && pwd)"/other/wezterm.sh
+source "$(cd "$(dirname "${BASH_SOURCE}")" &>/dev/null && cd .. && cd .. && pwd)"/other/wezterm.sh
