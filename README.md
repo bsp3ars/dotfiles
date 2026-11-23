@@ -3,7 +3,7 @@ Brandon's dotfiles
 
 ## Installation
 
-> If you are using WSL provide wsl as an argument to the install script below
+> If you are using WSL provide `wsl` as an argument to the install script below
 
 ```bash
 source dotfiles/setup/install.sh
