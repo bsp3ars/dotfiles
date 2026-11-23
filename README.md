@@ -1,7 +1,15 @@
 # dotfiles
 Brandon's dotfiles
 
-## Winsupply specific environment variables
+## Installation
+
+> If you are using WSL provide wsl as an argument to the install script below
+
+```bash
+source dotfiles/setup/install.sh
+```
+
+## Winsupply Specific Environment Variables
 
 Place the following in a file in the config folder and ensure that the extension is .local (so that git won't track the file)
 ```sh
